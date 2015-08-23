@@ -1,0 +1,58 @@
+<div class="page-header">
+    <h1>{{assesment.name}}</h1>
+</div>
+
+<div class="row">
+    <div class="list-group col-md-3">
+
+        <!-- Category list -->
+        <a href="" class="list-group-item" ng-class="{ active: $index==currentCategory}" ng-repeat="category in assesment.categories track by $index" ng-click="changeCategory($index)">
+            <span class="badge">{{assesment.categories[$index].questions.length}}</span>
+            <h4 class="list-group-item-heading">{{category.name}} </h4>
+            <p class="list-group-item-text" ng-if="$index==currentCategory">{{category.description}}</p>
+
+        </a>
+
+        <!-- Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar " aria-valuenow="{{progression}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progression}}%; ">
+                {{progression}}% ({{responseCount}} / {{questionCount}})
+            </div>
+        </div>
+    </div>
+
+    <!-- Assesment page -->
+    <div class="assesment col-md-9">
+
+        <p class="question"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{assesment.categories[currentCategory].questions[currentQuestion].title}}</p>
+
+
+        <div class="btn-group" role="group" ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses">
+
+            <!-- Never responded button -->
+            <button type="button" class="btn btn-lg" ng-if="userResponses[currentCategory][currentQuestion] !== response.id " ng-click="saveResponse(response.id)"><span class="glyphicon" aria-hidden="true"></span> {{response.value}}</button>
+
+            <!-- Already respondes button -->
+            <button type="button" class="btn btn-lg btn-success" ng-if="userResponses[currentCategory][currentQuestion] === response.id" ng-click="saveResponse(response.id)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.value}}</button>
+
+        </div>
+
+    </div>
+    <div class="col-md-9 text-center">
+        <ul class="pagination pagination-sm">
+            <li>
+                <a href="" aria-label="Previous " ng-click="changeQuestion(currentQuestion - 1)">
+                    <span aria-hidden="true ">&laquo;</span>
+                </a>
+            </li>
+            <li ng-class="{ active: $index==currentQuestion} " ng-repeat="question in assesment.categories[currentCategory].questions track by $index"><a href="" ng-click="changeQuestion($index)">{{$index}}</a></li>
+            <li>
+                <a href="" aria-label="Next " ng-click="changeQuestion(currentQuestion + 1)">
+                    <span aria-hidden="true ">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
