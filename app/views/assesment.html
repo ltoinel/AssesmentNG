@@ -15,7 +15,7 @@
 
         <!-- Progress Bar -->
         <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar " aria-valuenow="{{progression}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progression}}%; ">
+            <div class="progress-bar progress-bar-striped progress-bar-success" role="progressbar " aria-valuenow="{{progression}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progression}}%; ">
                 {{progression}}% ({{responseCount}} / {{questionCount}})
             </div>
         </div>
@@ -37,22 +37,23 @@
 
         </div>
 
+
     </div>
     <div class="col-md-9 text-center">
-        <ul class="pagination pagination-sm">
-            <li>
-                <a href="" aria-label="Previous " ng-click="changeQuestion(currentQuestion - 1)">
-                    <span aria-hidden="true ">&laquo;</span>
-                </a>
+
+        <ul class="pager ">
+            <li class="previous"><a href="" ng-click="previousQuestion()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Previous</a></li>
+            <li ng-repeat="question in assesment.categories[currentCategory].questions track by $index">
+                <button type="button" class="btn" ng-click="changeQuestion($index)" ng-class="{ btn-info: $index==currentQuestion}">{{$index}}</button>
             </li>
-            <li ng-class="{ active: $index==currentQuestion} " ng-repeat="question in assesment.categories[currentCategory].questions track by $index"><a href="" ng-click="changeQuestion($index)">{{$index}}</a></li>
-            <li>
-                <a href="" aria-label="Next " ng-click="changeQuestion(currentQuestion + 1)">
-                    <span aria-hidden="true ">&raquo;</span>
-                </a>
-            </li>
+            <li class="next"><a href="" ng-click="nextQuestion()">Next <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
         </ul>
     </div>
+
+    <ul class="pager">
+
+
+    </ul>
 
 
 </div>
