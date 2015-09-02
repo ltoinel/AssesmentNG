@@ -26,9 +26,17 @@ body {
         margin-bottom: 40px;
     }
 }
+.index {
+    button {
+        margin-right: 5px;
+    }
+}
 .page-header {
     margin: 10px 0px;
     color: #888;
+    h1 {
+        text-shadow: 1px 1px #ddd;
+    }
 }
 .jumbotron {
     background-color: #EAEAEA;

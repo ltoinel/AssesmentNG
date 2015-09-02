@@ -41,7 +41,7 @@ angular.module('assesmentNgApp')
 
             // Initialize the array
             if ($scope.userResponses[$scope.currentCategory] === undefined) {
-                $scope.userResponses[$scope.currentCategory] = {};
+                $scope.userResponses[$scope.currentCategory] = [];
             }
 
             // We count the response as a new response if it was empty

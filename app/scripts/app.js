@@ -24,11 +24,6 @@ angular
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('/contact', {
-                templateUrl: 'views/contact.html',
-                controller: 'ContactCtrl',
-                controllerAs: 'contact'
-            })
             .when('/assesment', {
                 templateUrl: 'views/assesment.html',
                 controller: 'AssesmentCtrl',

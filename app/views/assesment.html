@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>{{assesment.name}}</h1>
+    <h1><span class="glyphicon glyphicon-th" aria-hidden="true"></span> {{assesment.name}}</h1>
 </div>
 
 <div class="row">
@@ -7,7 +7,7 @@
 
         <!-- Category list -->
         <a href="" class="list-group-item" ng-class="{ active: $index==currentCategory}" ng-repeat="category in assesment.categories track by $index" ng-click="changeCategory($index)">
-            <span class="badge">{{assesment.categories[$index].questions.length}}</span>
+            <span class="badge">{{assesment.categories[$index].questions.length - userResponses[$index].length}}</span>
             <h4 class="list-group-item-heading">{{category.name}} </h4>
             <p class="list-group-item-text" ng-if="$index==currentCategory">{{category.description}}</p>
 
@@ -37,23 +37,26 @@
 
         </div>
 
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-3"></div>
+
+    <div class="col-md-9">
+
+        <div class="col-md-1">
+            <button type="button" ng-click="previousQuestion()" class="btn btn-primary">&lt; Previous</button>
+        </div>
+
+        <div class="col-md-10 text-center index">
+            <button ng-repeat="question in assesment.categories[currentCategory].questions track by $index" type="button" class="btn btn-sm" ng-click="changeQuestion($index)" ng-class="{ 'btn-success': userResponses[currentCategory][$index] !== undefined, 'active':$index==currentQuestion}">{{$index}}</button>
+        </div>
+
+        <div class="col-md-1">
+            <button type="button" ng-click="nextQuestion()" class="btn btn-primary">Next &gt;</button>
+        </div>
 
     </div>
-    <div class="col-md-9 text-center">
-
-        <ul class="pager ">
-            <li class="previous"><a href="" ng-click="previousQuestion()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Previous</a></li>
-            <li ng-repeat="question in assesment.categories[currentCategory].questions track by $index">
-                <button type="button" class="btn" ng-click="changeQuestion($index)" ng-class="{ btn-info: $index==currentQuestion}">{{$index}}</button>
-            </li>
-            <li class="next"><a href="" ng-click="nextQuestion()">Next <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
-        </ul>
-    </div>
-
-    <ul class="pager">
-
-
-    </ul>
-
-
 </div>
