@@ -16,5 +16,10 @@ angular.module('assesmentNgApp')
             return $http.get('api/assesment.json');
         }
 
+
+        factory.sendResponses = function (data) {
+            return $http.post('platform/api/assesment/responses', data);
+        }
+
         return factory;
     }]);

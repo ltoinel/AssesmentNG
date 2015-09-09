@@ -19,7 +19,6 @@ angular.module('assesmentNgApp')
         $scope.currentCategory = 0;
         $scope.responseCount = 0;
         $scope.userResponses = {};
-        $scope.completed = false;
 
         // Retreive the JSON form from Webservices
         assesmentFactory.getAssesment().success(function (data) {
@@ -35,6 +34,16 @@ angular.module('assesmentNgApp')
         }).error(function (error) {
             console.log("error: " + JSON.stringify(error));
         });
+
+        // Send the responses
+        $scope.sendResponses = function () {
+
+            assesmentFactory.sendResponses($scope.userResponses).success(function (data) {
+                console.log("Succes: " + JSON.stringify(data));
+            }).error(function (error) {
+                console.log("Error: " + JSON.stringify(error));
+            });
+        }
 
         // Save the user's response into a map
         $scope.saveResponse = function (responseId) {
@@ -92,6 +101,12 @@ angular.module('assesmentNgApp')
                 $scope.currentQuestion = 0;
                 $scope.currentCategory--;
             }
+        };
+
+        // Check if it is the last question
+        $scope.isLastQuestion = function () {
+
+            return $scope.assesment.categories !== undefined && ($scope.currentQuestion == ($scope.assesment.categories[$scope.currentCategory].questions.length - 1) && $scope.currentCategory == ($scope.assesment.categories.length - 1));
         };
 
     }]);

@@ -55,8 +55,37 @@
         </div>
 
         <div class="col-md-1">
-            <button type="button" ng-click="nextQuestion()" class="btn btn-primary">Next &gt;</button>
+
+            <!-- Next button -->
+            <button type="button" ng-click="nextQuestion()" class="btn btn-primary" ng-if="!isLastQuestion()">Next &gt;</button>
+
+            <!-- Finish the assesment -->
+            <button type="button" data-toggle="modal" data-target="#finishForm" class="btn btn-success" ng-if="isLastQuestion()">Finish &gt;</button>
+
         </div>
 
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="finishForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">You have finish the {{assesment.name}} !</h4>
+            </div>
+            <div class="modal-body">
+
+                <p ng-if="responseCount == questionCount">You filled the responses to all questions.</p>
+                <p ng-if="responseCount < questionCount">You missed to respond to {{questionCount - responseCount}} question(s)</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Review my responses</button>
+                <button type="button" class="btn btn-success" ng-click="sendResponses()">Send my responses</button>
+            </div>
+        </div>
     </div>
 </div>
