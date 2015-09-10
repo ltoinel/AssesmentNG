@@ -17,5 +17,4 @@ angular.module('assesmentNgApp')
     [28, 48, 40, 19, 96, 27, 100]
   ];
 
-
     });
