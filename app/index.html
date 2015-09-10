@@ -6,10 +6,18 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+
+    <!-- bower:css -->
+    <!-- endbower -->
+
+    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
 
 <body ng-app="assesmentNgApp">
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -38,12 +46,12 @@
 
 
     <div class="container">
-        <div ng-view="" class="content"></div>
+        <div class="content" ng-view=""></div>
     </div>
 
     <footer class="footer">
         <div class="container text-center">
-            <p><span class="glyphicon glyphicon-heart"></span> from the C&D Drivers team</p>
+            <p><span class="glyphicon glyphicon-heart"></span> from the C&amp;D Drivers Team</p>
         </div>
     </footer>
 
@@ -59,6 +67,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -67,6 +77,7 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/assesment.js"></script>
     <script src="scripts/controllers/header.js"></script>
+    <script src="scripts/controllers/synthesis.js"></script>
     <script src="scripts/services/assesmentfactory.js"></script>
     <!-- endbuild -->
 </body>
