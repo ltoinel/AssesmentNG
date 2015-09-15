@@ -1,12 +1,10 @@
-# assesment-ng
+# AssesmentNG
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+AssesmentNG is a new generation of assesment tool based on artificial inteligence engine.
+This project is the Web user interface for the assesment tool.
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
 
-Running `grunt test` will run the unit tests with karma.
