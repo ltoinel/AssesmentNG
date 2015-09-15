@@ -3,5 +3,17 @@
     <p class="lead">
         Assesments driven by artificial intelligence.
     </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#/assesment">Start DevOps Assesment <span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-3" ng-repeat="assesment in assesmentList">
+        <div class="thumbnail">
+            <img src="{{assesment.logo}}" alt="{{assesment.title}}">
+            <div class="caption">
+                <h3>{{assesment.name}}</h3>
+                <p>{{assesment.description}}</p>
+                <p><a class="btn btn-success btn-lg btn-block" role="button" ng-href="#/assesment/{{assesment.path}}"><span class="glyphicon glyphicon-play"></span> Start Assesment</a></p>
+            </div>
+        </div>
+    </div>
 </div>

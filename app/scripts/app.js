@@ -25,7 +25,7 @@ angular
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('/assesment', {
+            .when('/assesment/:assesmentPath', {
                 templateUrl: 'views/assesment.html',
                 controller: 'AssesmentCtrl',
                 controllerAs: 'assesment'

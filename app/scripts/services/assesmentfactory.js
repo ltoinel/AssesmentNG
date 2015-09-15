@@ -12,8 +12,13 @@ angular.module('assesmentNgApp')
 
         var factory = {};
 
-        factory.getAssesment = function () {
-            return $http.get('api/assesment.json');
+
+        factory.getAssesmentList = function () {
+            return $http.get('api/list.json');
+        }
+
+        factory.getAssesment = function (assesmentPath) {
+            return $http.get('api/' + assesmentPath);
         }
 
 

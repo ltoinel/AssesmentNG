@@ -62,6 +62,16 @@ body {
         }
     }
 }
+.thumbnail {
+    padding: 10px;
+    .caption {
+        min-height: 150px;
+        p {
+            font-size: 100%;
+            color: #666;
+        }
+    }
+}
 
 /* Custom page header */
 

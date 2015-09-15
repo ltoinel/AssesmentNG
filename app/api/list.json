@@ -1,0 +1,14 @@
+[{
+        "id": 1,
+        "name": "DevOPS",
+        "path": "devops.json",
+        "description": "DevOPS maturity assesment",
+        "logo": "icons/devops.png"
+},
+    {
+        "id": 2,
+        "name": "Java",
+        "path": "java.json",
+        "description": "Java skills assesment",
+        "logo": "icons/java.png"
+}]

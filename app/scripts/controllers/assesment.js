@@ -12,7 +12,7 @@
  * Controller of the assesmentNgApp
  */
 angular.module('assesmentNgApp')
-    .controller('AssesmentCtrl', ['$scope', 'assesmentFactory', function ($scope, assesmentFactory) {
+    .controller('AssesmentCtrl', ['$scope', '$routeParams', 'assesmentFactory', function ($scope, $routeParams, assesmentFactory) {
 
         // Index
         $scope.currentQuestion = 0;
@@ -20,8 +20,10 @@ angular.module('assesmentNgApp')
         $scope.responseCount = 0;
         $scope.userResponses = {};
 
+        console.log("PArams :" + $routeParams.assesmentPath);
+
         // Retreive the JSON form from Webservices
-        assesmentFactory.getAssesment().success(function (data) {
+        assesmentFactory.getAssesment($routeParams.assesmentPath).success(function (data) {
 
             $scope.assesment = data;
             $scope.questionCount = 0;
