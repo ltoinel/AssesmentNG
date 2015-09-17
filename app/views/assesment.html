@@ -27,16 +27,29 @@
         <p class="question"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{assesment.categories[currentCategory].questions[currentQuestion].title}}</p>
 
 
-        <div class="btn-group" role="group" ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses">
+        <!-- Horizontal display -->
+        <div class="btn-group" role="group" ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses" ng-if="assesment.display == 'horizontal' || assesment.display == undefined">
 
             <!-- Never responded button -->
-            <button type="button" class="btn btn-lg" ng-if="userResponses[currentCategory][currentQuestion] !== response.id " ng-click="saveResponse(response.id)"><span class="glyphicon" aria-hidden="true"></span> {{response.value}}</button>
+            <button type="button" class="btn btn-lg response" ng-if="userResponses[currentCategory][currentQuestion] !== response.id " ng-click="saveResponse(response.id)"><span class="glyphicon" aria-hidden="true"></span> {{response.value}}</button>
 
-            <!-- Already respondes button -->
-            <button type="button" class="btn btn-lg btn-success" ng-if="userResponses[currentCategory][currentQuestion] === response.id" ng-click="saveResponse(response.id)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.value}}</button>
-
+            <!-- Already responded button -->
+            <button type="button" class="btn btn-lg btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response.id" ng-click="saveResponse(response.id)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.value}}</button>
+            
         </div>
+        
+        <!-- Vertical display -->
+        <ol type="A" ng-if="assesment.display == 'vertical'">
+            <li  ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses" >
 
+                <!-- Never responded button -->
+                <button type="button" class="btn btn-default response" ng-if="userResponses[currentCategory][currentQuestion] !== response.id " ng-click="saveResponse(response.id)"><span class="glyphicon" aria-hidden="true"></span> {{response.value}}</button>
+
+                <!-- Already responded button -->
+                <button type="button" class="btn btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response.id" ng-click="saveResponse(response.id)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.value}}</button>
+
+            </li>
+        </ol>
     </div>
 </div>
 

@@ -11,4 +11,18 @@
         "path": "java.json",
         "description": "Java skills assesment",
         "logo": "icons/java.png"
+},
+    {
+        "id": 2,
+        "name": "PHP",
+        "path": "php.json",
+        "description": "PHP skills assesment",
+        "logo": "icons/php.png"
+},
+    {
+        "id": 2,
+        "name": ".NET",
+        "path": "dotnet.json",
+        "description": "Dotnet skills assesment",
+        "logo": "icons/visualstudio.png"
 }]

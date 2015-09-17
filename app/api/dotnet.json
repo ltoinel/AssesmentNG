@@ -1,0 +1,340 @@
+{
+    "id": 1,
+    "name": "Dotnet Assesment",
+    "type": "Public",
+    "display": "vertical",
+    "categories": [
+        {
+            "id": "1",
+            "name": "Newbie",
+            "description": "Newbie questions",
+            "questions": [
+                {
+                    "id": 1,
+                    "title": "What is a constructor ?",
+                    "complexity": 1,
+                    "responses": [
+                        {
+                            "id": "n1-1",
+                            "value": "A constructor is a method that is called when an object is created"
+						},
+                        {
+                            "id": "n1-2",
+                            "value": "A constructor is a method that is called when an object of that class is created",
+                            "response": true
+						},
+                        {
+                            "id": "n1-3",
+                            "value": "A constructor is the first method of a program"
+						}
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "What namespace is used for ?",
+                    "complexity": 1,
+                    "responses": [
+                        {
+                            "id": "n2-1",
+                            "value": "This is a global name for the application"
+						},
+                        {
+                            "id": "n2-2",
+                            "value": "This a logical name we can track in task manager"
+						},
+                        {
+                            "id": "n2-3",
+                            "value": "It organizes classes within the .NET Framework",
+                            "response": true
+						}
+					]
+				},
+                {
+                    "id": 3,
+                    "title": "What is overloading ?",
+                    "complexity": 1,
+                    "responses": [
+                        {
+                            "id": "n3-1",
+                            "value": "This is when you have multiple methods in the same scope with the same name but different signatures",
+                            "response": true
+						},
+                        {
+                            "id": "n3-2",
+                            "value": "This is when the application need more memory"
+						},
+                        {
+                            "id": "n3-3",
+                            "value": "This is when you have multiple methods with the same name but different signatures"
+						}
+					]
+				},
+                {
+                    "id": 4,
+                    "title": "What Is boxing ?",
+                    "complexity": 1,
+                    "responses": [
+                        {
+                            "id": "n4-1",
+                            "value": "This is the process of explicitly converting a value type into a corresponding reference type",
+                            "response": true
+						},
+                        {
+                            "id": "n4-2",
+                            "value": "This is when you convert a value type in a different type"
+						},
+                        {
+                            "id": "n4-3",
+                            "value": "This is when you transform an object in a human readable string"
+						}
+					]
+				},
+                {
+                    "id": 5,
+                    "title": "What is the output of the program below ",
+                        "complexity": 1,
+                        "responses": [
+                            {
+                                "id": "n5-1",
+                                "value": "Location is null  // 1/1/0001 12:00:00 AM",
+                                "response": true
+						},
+                            {
+                                "id": "n5-2",
+                                "value": "Location is null // time is null"
+						},
+                            {
+                                "id": "n5-3",
+                                "value": "It doesn’t compile"
+						}
+					]
+                    }
+
+
+                    ]
+            },
+
+        {
+            "id": "2",
+            "name": "Expert",
+            "description": "Expert questions",
+            "questions": [
+                {
+                    "id": 1,
+                    "title": "What is the difference between struct and class ?",
+                    "complexity": 2,
+                    "responses": [
+                        {
+                            "id": "e1-1",
+                            "value": "They are the same, but struct are faster"
+						},
+                        {
+                            "id": "e1-2",
+                            "value": "Classes are stored on heap and struct on stack",
+                            "response": true
+						},
+                        {
+                            "id": "e1-3",
+                            "value": "Classes are stored on stack and struct on heap"
+						}
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "What is the overhead of an Microsoft .NET CLR v4 x64 object ?",
+                    "complexity": 2,
+                    "responses": [
+                        {
+                            "id": "e2-1",
+                            "value": "24 bits"
+						},
+                        {
+                            "id": "e2-2",
+                            "value": "8 bits"
+						},
+                        {
+                            "id": "e2-3",
+                            "value": "16 bits",
+                            "response": true                            
+						}
+					]
+				},
+                {
+                    "id": 3,
+                    "title": "What is JIT ?",
+                    "complexity": 2,
+                    "responses": [
+                        {
+                            "id": "e3-1",
+                            "value": "This is used when you build a solution"
+						},
+                        {
+                            "id": "e3-2",
+                            "value": "This is used  compiles the code to bytecode on the fly after the program has started",
+                            "response": true                        
+						},
+                        {
+                            "id": "e3-3",
+                            "value": "This is used when IIS compress html page"                       
+						}
+					]
+				},
+                {
+                    "id": 4,
+                    "title": "What is LOH ?",
+                    "complexity": 2,
+                    "responses": [
+                        {
+                            "id": "e4-1",
+                            "value": "A specific zone of memory used by the garbage collector",
+                            "response": true     
+						},
+                        {
+                            "id": "e4-2",
+                            "value": "This is the last generation of memory in garbage collector"
+                   
+						},
+                        {
+                            "id": "e4-3",
+                            "value": "A tool to track memory pressure on azure websites"                       
+						}
+					]
+				},
+                {
+                    "id": 5,
+                    "title": "What is the fastest way to check if a string is empty ?",
+                    "complexity": 2,
+                    "responses": [
+                        {
+                            "id": "e5-1",
+                            "value": "str == \"\"",
+                            "response": true     
+						},
+                        {
+                            "id": "e5-2",
+                            "value": "str == string.Empty"
+                   
+						},
+                        {
+                            "id": "e5-3",
+                            "value": "str.Length == 0"                       
+						},
+                        {
+                            "id": "e5-4",
+                            "value": "It’s all the same"                       
+						}
+					]
+				}                
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Guru",
+            "description": "Guru questions",
+            "questions": [
+                {
+                    "id": 1,
+                    "title": "What is ARR ?",
+                    "complexity": 3,
+                    "responses": [
+                        {
+                            "id": "g1-1",
+                            "value": "ARR is a IIS tool to enable load balancing",
+                             "response": true                           
+						},
+                        {
+                            "id": "g1-2",
+                            "value": "ARR is used by Microsoft in Azure to ensure security in multi tenant"
+
+						},
+                        {
+                            "id": "g1-3",
+                            "value": "ARR is a reader for IIS routing logs"
+						}
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "What you can use as an alternative to JSON.net to serialize Object to JSON ?",
+                    "complexity": 3,
+                    "responses": [
+                        {
+                            "id": "g2-1",
+                            "value": "Dapper",
+                             "response": true                           
+						},
+                        {
+                            "id": "g2-2",
+                            "value": "Jil"
+
+						},
+                        {
+                            "id": "g2-3",
+                            "value": "Newtonsoft Json serializer"
+						}
+					]
+				},
+                {
+                    "id": 3,
+                    "title": "What is polybase ?",
+                    "complexity": 3,
+                    "responses": [
+                        {
+                            "id": "g3-1",
+                            "value": "A feature of SQL Server that enables a cluster to use different version of the database engine"                    
+						},
+                        {
+                            "id": "g3-2",
+                            "value": "A feature of SQL Server to allow T-SQL statement to access Hadoop or Azure Blob Storage",
+                            "response": true                                
+						},
+                        {
+                            "id": "g3-3",
+                            "value": "A feature of SQL Server to use a single T-SQL statement across different database (SQL Server, Oracle, Postgres, MySQL)"
+						}
+					]
+				},                               
+                {
+                    "id": 4,
+                    "title": "What is key difference between Heapsort and Merge sort ?",
+                    "complexity": 3,
+                    "responses": [
+                        {
+                            "id": "g4-1",
+                            "value": "Heapsort is faster and use less memory"                    
+						},
+                        {
+                            "id": "g4-2",
+                            "value": "Heapsort is not a divide and conquer algorithm",
+                            "response": true                                
+						},
+                        {
+                            "id": "g4-3",
+                            "value": "Heapsort is equivalent to merge sort but it is threadsafe "
+						}
+					]
+				},
+                {
+                    "id": 5,
+                    "title": "In the IoT scope, what protocol would be best ?",
+                    "complexity": 3,
+                    "responses": [
+                        {
+                            "id": "g5-1",
+                            "value": "REST over HTTP"                    
+						},
+                        {
+                            "id": "g5-2",
+                            "value": "REST with protobuf",
+                            "response": true                                
+						},
+                        {
+                            "id": "g5-3",
+                            "value": "MQTT"
+						}
+					]
+				}
+            ]
+        }
+    ]
+}

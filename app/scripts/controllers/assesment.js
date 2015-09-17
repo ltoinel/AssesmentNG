@@ -12,7 +12,7 @@
  * Controller of the assesmentNgApp
  */
 angular.module('assesmentNgApp')
-    .controller('AssesmentCtrl', ['$scope', '$routeParams', 'assesmentFactory', function ($scope, $routeParams, assesmentFactory) {
+    .controller('AssesmentCtrl', ['$scope', '$routeParams', '$location', 'assesmentFactory', function ($scope, $routeParams, $location, assesmentFactory) {
 
         // Index
         $scope.currentQuestion = 0;
@@ -45,6 +45,10 @@ angular.module('assesmentNgApp')
             }).error(function (error) {
                 console.log("Error: " + JSON.stringify(error));
             });
+            
+            $location.path("synthesis"); 
+            
+               $scope.$apply();
         }
 
         // Save the user's response into a map

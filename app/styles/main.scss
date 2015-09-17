@@ -18,12 +18,16 @@ body {
     background-color: #FFFFFF;
     border-radius: 8px;
     padding: 40px;
+    margin-bottom: 20px;
     button {
         margin-right: 20px;
     }
     .question {
         font-size: 150%;
         margin-bottom: 40px;
+    }
+    .response {
+        margin-bottom: 20px;
     }
 }
 .index {
@@ -63,7 +67,7 @@ body {
     }
 }
 .thumbnail {
-    padding: 10px;
+    padding: 20px 10px;
     .caption {
         min-height: 150px;
         p {
