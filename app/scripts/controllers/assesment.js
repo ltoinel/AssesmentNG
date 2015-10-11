@@ -12,7 +12,7 @@
  * Controller of the assesmentNgApp
  */
 angular.module('assesmentNgApp')
-    .controller('AssesmentCtrl', ['$scope', '$routeParams', '$location', 'assesmentFactory', function ($scope, $routeParams, $location, assesmentFactory) {
+    .controller('AssesmentCtrl', ['$scope', '$rootScope','$routeParams', '$location', 'assesmentFactory', function ($scope, $rootScope, $routeParams, $location, assesmentFactory) {
 
         // Index
         $scope.currentQuestion = 0;
@@ -20,14 +20,12 @@ angular.module('assesmentNgApp')
         $scope.responseCount = 0;
         $scope.userResponses = {};
 
-        console.log("PArams :" + $routeParams.assesmentPath);
-
-        // Retreive the JSON form from Webservices
+        // Retrieve the JSON form from Webservices
         assesmentFactory.getAssesment($routeParams.assesmentPath).success(function (data) {
 
             $scope.assesment = data;
             $scope.questionCount = 0;
-
+  
             // Count the questions
             angular.forEach($scope.assesment.categories, function (value, key) {
                 $scope.questionCount = $scope.questionCount + value.questions.length;
@@ -46,13 +44,14 @@ angular.module('assesmentNgApp')
                 console.log("Error: " + JSON.stringify(error));
             });
             
+            $rootScope.userResponses = $scope.userResponses;
+            $rootScope.assesment = $scope.assesment;
+
             $location.path("synthesis"); 
-            
-               $scope.$apply();
         }
 
         // Save the user's response into a map
-        $scope.saveResponse = function (responseId) {
+        $scope.saveResponse = function (response) {
 
             // Initialize the array
             if ($scope.userResponses[$scope.currentCategory] === undefined) {
@@ -60,13 +59,12 @@ angular.module('assesmentNgApp')
             }
 
             // We count the response as a new response if it was empty
-            if ($scope.userResponses[$scope.currentCategory][$scope.currentQuestion] === undefined) {
+            if ($scope.userResponses[$scope.currentCategory][$scope.currentQuestion] === undefined && response !== undefined) {
                 $scope.responseCount++;
             }
 
             // Save the response
-            $scope.userResponses[$scope.currentCategory][$scope.currentQuestion] = responseId;
-
+            $scope.userResponses[$scope.currentCategory][$scope.currentQuestion] = response;
 
             // Global progression calculation
             $scope.progression = Math.round($scope.responseCount / $scope.questionCount * 100);

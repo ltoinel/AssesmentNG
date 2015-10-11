@@ -14,15 +14,18 @@
                     "responses": [
                         {
                             "id": "s1-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
 						},
                         {
                             "id": "s1-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
 						},
                         {
                             "id": "s1-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
 						}
 					]
 				},
@@ -32,15 +35,18 @@
                     "responses": [
                         {
                             "id": "s2-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
 						},
                         {
                             "id": "s2-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
 						},
                         {
                             "id": "s2-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
 						}
 					]
 				}
@@ -58,15 +64,18 @@
                     "responses": [
                         {
                             "id": "a1-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
 						},
                         {
                             "id": "a1-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
 						},
                         {
                             "id": "a1-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
 						}
 					]
 				},
@@ -76,13 +85,16 @@
                     "responses": [
                         {
                             "id": "a2-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
                         }, {
                             "id": "a2-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
                         }, {
                             "id": "a2-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
                         }
 					]
 				}
@@ -99,13 +111,16 @@
                     "responses": [
                         {
                             "id": "i1-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
                         }, {
                             "id": "i1-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
                         }, {
                             "id": "i1-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
                         }
 					]
 				},
@@ -115,13 +130,16 @@
                     "responses": [
                         {
                             "id": "i2-1",
-                            "value": "response #1"
+                            "label": "response #1",
+                            "value": "no"
                         }, {
                             "id": "i2-2",
-                            "value": "response #2"
+                            "label": "response #2",
+                            "value": "yes"
                         }, {
                             "id": "i2-3",
-                            "value": "response #3"
+                            "label": "response #3",
+                            "value": "planned"
                         }
 					]
 				}
