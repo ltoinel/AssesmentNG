@@ -22,7 +22,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+    <!-- Main header -->
     <div class="header" ng-controller="HeaderCtrl">
         <div class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -32,12 +32,13 @@
                     <ul class="nav navbar-nav">
                         <li ng-class="{ active: isActive('/')}"><a href="#/"><span class="glyphicon glyphicon-align-justify
 glyphicon " aria-hidden="true"></span> Assesments</a></li>
-                        <li ng-class="{ active: isActive('/contact')}"><a ng-href="mailto:thedrivers_cd2015.cor@capgemini.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
+                        <li ng-class="{ active: isActive('/contact')}"><a ng-href="http://a2xp.corp.capgemini.com/#contact"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <!-- Logo with comma -->
         <div class="container">
             <img src="images/comma-white.png" alt="comma" class="header-comma" />
             <img src="images/logo.png" alt="capgemini" class="logo" />
@@ -46,10 +47,12 @@ glyphicon " aria-hidden="true"></span> Assesments</a></li>
     </div>
 
 
+    <!-- Apps container -->
     <div class="container">
         <div class="content" ng-view=""></div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
             <p><span class="glyphicon glyphicon-heart"></span> from the C&amp;D Drivers Team</p>

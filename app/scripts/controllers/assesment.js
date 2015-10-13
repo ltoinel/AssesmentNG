@@ -47,7 +47,10 @@ angular.module('assesmentNgApp')
             $rootScope.userResponses = $scope.userResponses;
             $rootScope.assesment = $scope.assesment;
 
+           $('#finishForm').modal('toggle');
+            $('.modal-backdrop').remove();      
             $location.path("synthesis"); 
+             
         }
 
         // Save the user's response into a map

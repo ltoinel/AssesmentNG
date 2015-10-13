@@ -2,6 +2,8 @@
     "id": 1,
     "name": "DevOPS Assesment",
     "type": "Public",
+    "series"  : {"yes" : "current", "planned" : "expected"},
+    
     "categories": [
         {
             "id": "s",

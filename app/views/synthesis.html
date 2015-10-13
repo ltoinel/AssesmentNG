@@ -1,5 +1,23 @@
+<div class="page-header">
+    <h1><span class="glyphicon glyphicon-th" aria-hidden="true"></span> {{assesment.name}} synthesis</h1>
+</div>
 
+<div class="row synthesis">
+    
+    <div class="col-md-3">
+        
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="label in labels">
+            <span class="badge">{{responseCount[label]}}</span>
+            {{label}}
+          </li>
+        </ul>
+        
+        <button class="btn btn-success" ng-click="print()"> <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
+    </div>
+    
+    <div class="col-md-9">
+        <canvas id="radar" class="chart chart-radar" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series"></canvas>
+    </div>
 
-
-<canvas id="radar" class="chart chart-radar" chart-data="data" chart-labels="labels">
-</canvas>
+</div>
