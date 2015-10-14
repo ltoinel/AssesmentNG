@@ -7,7 +7,7 @@
 
         <!-- Category list -->
         <a href="" class="list-group-item" ng-class="{ active: $index==currentCategory}" ng-repeat="category in assesment.categories track by $index" ng-click="changeCategory($index)">
-            <span class="badge">{{assesment.categories[$index].questions.length - userResponses[$index].length}}</span>
+            <span class="badge">{{assesment.categories[$index].questions.length - responseCategoryCount[$index]}}</span>
             <h4 class="list-group-item-heading">{{category.name}} </h4>
             <p class="list-group-item-text" ng-if="$index==currentCategory">{{category.description}}</p>
 

@@ -13,11 +13,12 @@
  */
 angular.module('assesmentNgApp')
     .controller('AssesmentCtrl', ['$scope', '$rootScope','$routeParams', '$location', 'assesmentFactory', function ($scope, $rootScope, $routeParams, $location, assesmentFactory) {
-
+        
         // Index
         $scope.currentQuestion = 0;
         $scope.currentCategory = 0;
         $scope.responseCount = 0;
+        $scope.responseCategoryCount = [];
         $scope.userResponses = {};
 
         // Retrieve the JSON form from Webservices
@@ -64,6 +65,11 @@ angular.module('assesmentNgApp')
             // We count the response as a new response if it was empty
             if ($scope.userResponses[$scope.currentCategory][$scope.currentQuestion] === undefined && response !== undefined) {
                 $scope.responseCount++;
+                
+                if ($scope.responseCategoryCount[$scope.currentCategory] === undefined){
+                    $scope.responseCategoryCount[$scope.currentCategory] = 0;
+                }
+                $scope.responseCategoryCount[$scope.currentCategory]++;
             }
 
             // Save the response
