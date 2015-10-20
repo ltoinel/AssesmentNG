@@ -1,151 +1,1752 @@
 {
-    "id": 1,
-    "name": "DevOPS Assesment",
-    "type": "Public",
-    "series"  : {"yes" : "current", "planned" : "expected"},
-    
-    "categories": [
+  "id": 1,
+  "name": "DevOPS",
+  "type": "Public",
+  "series": {
+    "YES": "current",
+    "PLANNED": "expected"
+  },
+  "categories": [
+    {
+      "id": "s",
+      "name": "Source Control",
+      "description": "Source code questions",
+      "level": {
+        "Current": "Intermediete",
+        "Expecter": "Advanced"
+      },
+      "questions": [
         {
-            "id": "s",
-            "name": "Source Code",
-            "description": "Source code questions",
-            "questions": [
-                {
-                    "id": 1,
-                    "title": "This is the first question",
-                    "responses": [
-                        {
-                            "id": "s1-1",
-                            "label": "response #1",
-                            "value": "no"
-						},
-                        {
-                            "id": "s1-2",
-                            "label": "response #2",
-                            "value": "yes"
-						},
-                        {
-                            "id": "s1-3",
-                            "label": "response #3",
-                            "value": "planned"
-						}
-					]
-				},
-                {
-                    "id": 2,
-                    "title": "This is the second question",
-                    "responses": [
-                        {
-                            "id": "s2-1",
-                            "label": "response #1",
-                            "value": "no"
-						},
-                        {
-                            "id": "s2-2",
-                            "label": "response #2",
-                            "value": "yes"
-						},
-                        {
-                            "id": "s2-3",
-                            "label": "response #3",
-                            "value": "planned"
-						}
-					]
-				}
-			]
-		},
-
+          "id": 1,
+          "title": "Source code, application configurations, environment configurations, build scripts are into version control?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "s1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
         {
-            "id": 2,
-            "name": "Agility",
-            "description": "Agility questions",
-            "questions": [
-                {
-                    "id": "a",
-                    "title": "This is the first question of agility",
-                    "responses": [
-                        {
-                            "id": "a1-1",
-                            "label": "response #1",
-                            "value": "no"
-						},
-                        {
-                            "id": "a1-2",
-                            "label": "response #2",
-                            "value": "yes"
-						},
-                        {
-                            "id": "a1-3",
-                            "label": "response #3",
-                            "value": "planned"
-						}
-					]
-				},
-                {
-                    "id": 2,
-                    "title": "This is the second question of agility",
-                    "responses": [
-                        {
-                            "id": "a2-1",
-                            "label": "response #1",
-                            "value": "no"
-                        }, {
-                            "id": "a2-2",
-                            "label": "response #2",
-                            "value": "yes"
-                        }, {
-                            "id": "a2-3",
-                            "label": "response #3",
-                            "value": "planned"
-                        }
-					]
-				}
-			]
-		},
+          "id": 2,
+          "title": "Code commit is frequent (3-4 times per day per developer)?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "s2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
         {
-            "id": "i",
-            "name": "Infrastructure",
-            "description": "Infrastructure questions",
-            "questions": [
-                {
-                    "id": 1,
-                    "title": "This is the first question of infrastructure",
-                    "responses": [
-                        {
-                            "id": "i1-1",
-                            "label": "response #1",
-                            "value": "no"
-                        }, {
-                            "id": "i1-2",
-                            "label": "response #2",
-                            "value": "yes"
-                        }, {
-                            "id": "i1-3",
-                            "label": "response #3",
-                            "value": "planned"
-                        }
-					]
-				},
-                {
-                    "id": 2,
-                    "title": "This is the second question of infrastructure",
-                    "responses": [
-                        {
-                            "id": "i2-1",
-                            "label": "response #1",
-                            "value": "no"
-                        }, {
-                            "id": "i2-2",
-                            "label": "response #2",
-                            "value": "yes"
-                        }, {
-                            "id": "i2-3",
-                            "label": "response #3",
-                            "value": "planned"
-                        }
-					]
-				}
-			]
-		}
-	]
+          "id": 3,
+          "title": "Code is local built with latest code, unit tested and code reviewed before commit (pre-tested commit)?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Standard process (branching, tagging, versioning and merging etc?) is defined?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Commits (change) are tied to tasks?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Application and environment configurations are externalized from code, and each are maintained separate?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "DB scripts (schema, data) are in version control?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s7-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s7-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s7-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Mainline update is frequent?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s8-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s8-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s8-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Minimal branching?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s9-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s9-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s9-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Infrastruture (environment provisioning) as code into version control?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "s10-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "s10-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "s10-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "name": "Build",
+      "description": "Build questions",
+      "level": {
+        "Current": "Advanced",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Official builds are performed on separate build machines?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "b1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Self service and full nightly builds (at least once) are performed?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "b2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Standard build process (compile, SCA, UT, FT and KPIs) is defined for local and central build?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Common build scripts for local as well as central build (and also include SCA, UT, FT and meet KPIs)? Pre-Tested Build?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Code is polled from source control and build on commit?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Build artifacts are managed through artifactory repository with versioning?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Build notifications configured (success as well as failures for KPIs)?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b7-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b7-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b7-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Build dashboard is defined providing built staus and KPIs details?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b8-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b8-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b8-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Dependencies are managed in a respository?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b9-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b9-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b9-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Versioning and tagging of code is automated, and is part of the build process?",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "b10-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b10-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b10-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Triggered builds (no polling) for each code commit into version control?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "b11-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b11-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b11-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Distributed builds on build cluster?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "b12-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b12-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b12-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Build environment on VMs?",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "b13-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b13-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b13-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Gated commits?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "b14-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "b14-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "b14-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t",
+      "name": "Test Management",
+      "description": "Test Management questions",
+      "level": {
+        "Current": "Beginner",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Automated UT and SCA is part of the local and central build?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Standard testing process (UT, FT, IT, PT, UAT and KPIs) is defined?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Peer-reviews?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "KPIs are measured with sigificant coverage?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Notifications are configured for each kind of testing?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "t5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Mocks are used for external test dependencies?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "t6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "UT, SCA and Smoke Testing on each commit and part of build?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t7-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t7-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t7-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Functional testing automation?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t8-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t8-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t8-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Dynamic functional test coverage?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t9-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t9-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t9-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Integrated management and maintenance of the test data?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t10-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t10-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t10-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Service Virtualiation capabilities built?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t11-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t11-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t11-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "IT is automated and performed on each commit, and is not delayed to post development?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t12-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t12-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t12-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Non-Functional testing is automated?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t13-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t13-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t13-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Moderate UAT automation?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t14-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t14-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t14-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Maximum UAT automation with significant coverage?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t15-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "t15-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "t15-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "name": "Deployment",
+      "description": "Deployment questions",
+      "level": {
+        "Current": "Intermediete",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Full scripted deployments?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "d1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Full scripted environment provisioning?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "d2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Build artifacts are not environment specific?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Standard environment provisioning and deploymnet process is defined?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Push button deployment to test environments?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Notifications and logging is configured in deployment workflow?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Aumated provisioning and deployment to test environments?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d7-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d7-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d7-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Standard common deployment scripts and across all environments?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d8-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d8-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d8-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Push button deployment to pre-prod environment?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d9-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d9-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d9-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Automated provisioning and deployment to pre-prod environment?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d10-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d10-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d10-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Automated provisioning and deployment of database?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d11-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d11-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d11-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Push button deployment to production environment?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d12-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d12-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d12-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Co-ordinated multi-tier orchestrated deployment (governance with workflow)?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d13-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d13-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d13-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Promote VM or Container for deployment?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d14-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d14-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d14-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Zero touch deployment upto production?",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d15-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "d15-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "d15-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r",
+      "name": "Release Management",
+      "description": "Release Management questions",
+      "level": {
+        "Current": "Advanced",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Releases are frequent and so not lengthy?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "r1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Standard process for release management (covering change request and approval) is defined?",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "r2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Tracking from requirements to release is built within delivery pipeline?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Built in tracing built within delivery pipeline and release notes are auto generated?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Feature based development and releases?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Self service roll in and roll back built within delivery pipeline?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "r6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "r6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "r6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m",
+      "name": "Monitoring",
+      "description": "Monitoring questions",
+      "level": {
+        "Current": "Base",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Single view dashboard is defined that covers all activities within devliery pipeline?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m1-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m1-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m1-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tools generated and custom reports are visible to different stakeholders?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m2-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m2-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m2-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Minimal quantitative metrics?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "m3-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m3-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m3-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Historical and real time cross function reports are visible?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m4-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m4-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m4-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Full quantitative metrics?",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m5-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m5-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m5-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Cross function report trending?",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "m6-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m6-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m6-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Cross function report analysis?",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "m7-1",
+              "value": "YES",
+              "label": "YES",
+              "type": "choice"
+            },
+            {
+              "id": "m7-2",
+              "value": "NO",
+              "label": "NO",
+              "type": "choice"
+            },
+            {
+              "id": "m7-3",
+              "value": "PLANNED",
+              "label": "PLANNED",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

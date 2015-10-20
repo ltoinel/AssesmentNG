@@ -1,0 +1,151 @@
+{
+    "id": 1,
+    "name": "DevOPS Assesment",
+    "type": "Public",
+    "series"  : {"yes" : "current", "planned" : "expected"},
+    
+    "categories": [
+        {
+            "id": "s",
+            "name": "Source Code",
+            "description": "Source code questions",
+            "questions": [
+                {
+                    "id": 1,
+                    "title": "This is the first question",
+                    "responses": [
+                        {
+                            "id": "s1-1",
+                            "label": "response #1",
+                            "value": "no"
+						},
+                        {
+                            "id": "s1-2",
+                            "label": "response #2",
+                            "value": "yes"
+						},
+                        {
+                            "id": "s1-3",
+                            "label": "response #3",
+                            "value": "planned"
+						}
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "This is the second question",
+                    "responses": [
+                        {
+                            "id": "s2-1",
+                            "label": "response #1",
+                            "value": "no"
+						},
+                        {
+                            "id": "s2-2",
+                            "label": "response #2",
+                            "value": "yes"
+						},
+                        {
+                            "id": "s2-3",
+                            "label": "response #3",
+                            "value": "planned"
+						}
+					]
+				}
+			]
+		},
+
+        {
+            "id": 2,
+            "name": "Agility",
+            "description": "Agility questions",
+            "questions": [
+                {
+                    "id": "a",
+                    "title": "This is the first question of agility",
+                    "responses": [
+                        {
+                            "id": "a1-1",
+                            "label": "response #1",
+                            "value": "no"
+						},
+                        {
+                            "id": "a1-2",
+                            "label": "response #2",
+                            "value": "yes"
+						},
+                        {
+                            "id": "a1-3",
+                            "label": "response #3",
+                            "value": "planned"
+						}
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "This is the second question of agility",
+                    "responses": [
+                        {
+                            "id": "a2-1",
+                            "label": "response #1",
+                            "value": "no"
+                        }, {
+                            "id": "a2-2",
+                            "label": "response #2",
+                            "value": "yes"
+                        }, {
+                            "id": "a2-3",
+                            "label": "response #3",
+                            "value": "planned"
+                        }
+					]
+				}
+			]
+		},
+        {
+            "id": "i",
+            "name": "Infrastructure",
+            "description": "Infrastructure questions",
+            "questions": [
+                {
+                    "id": 1,
+                    "title": "This is the first question of infrastructure",
+                    "responses": [
+                        {
+                            "id": "i1-1",
+                            "label": "response #1",
+                            "value": "no"
+                        }, {
+                            "id": "i1-2",
+                            "label": "response #2",
+                            "value": "yes"
+                        }, {
+                            "id": "i1-3",
+                            "label": "response #3",
+                            "value": "planned"
+                        }
+					]
+				},
+                {
+                    "id": 2,
+                    "title": "This is the second question of infrastructure",
+                    "responses": [
+                        {
+                            "id": "i2-1",
+                            "label": "response #1",
+                            "value": "no"
+                        }, {
+                            "id": "i2-2",
+                            "label": "response #2",
+                            "value": "yes"
+                        }, {
+                            "id": "i2-3",
+                            "label": "response #3",
+                            "value": "planned"
+                        }
+					]
+				}
+			]
+		}
+	]
+}

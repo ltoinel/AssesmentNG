@@ -31,10 +31,10 @@
         <div class="btn-group" role="group" ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses" ng-if="assesment.display == 'horizontal' || assesment.display == undefined">
 
             <!-- Never responded button -->
-            <button type="button" class="btn btn-lg response" ng-if="userResponses[currentCategory][currentQuestion] !== response " ng-click="saveResponse(response)"><span class="glyphicon" aria-hidden="true"></span> {{response.label}}</button>
+            <button type="button" class="btn btn-lg response" ng-if="userResponses[currentCategory][currentQuestion] !== response " ng-click="saveResponse(response, assesment.categories[currentCategory].questions[currentQuestion].weight)"><span class="glyphicon" aria-hidden="true"></span> {{response.label}}</button>
 
             <!-- Already responded button -->
-            <button type="button" class="btn btn-lg btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response" ng-click="saveResponse(response)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.label}}</button>
+            <button type="button" class="btn btn-lg btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response" ng-click="saveResponse(response, assesment.categories[currentCategory].questions[currentQuestion].weight)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.label}}</button>
             
         </div>
         
@@ -43,10 +43,10 @@
             <li  ng-repeat="response in assesment.categories[currentCategory].questions[currentQuestion].responses" >
 
                 <!-- Never responded button -->
-                <button type="button" class="btn btn-default response" ng-if="userResponses[currentCategory][currentQuestion] !== response" ng-click="saveResponse(response)"><span class="glyphicon" aria-hidden="true"></span> {{response.label}}</button>
+                <button type="button" class="btn btn-default response" ng-if="userResponses[currentCategory][currentQuestion] !== response" ng-click="saveResponse(response, assesment.categories[currentCategory].questions[currentQuestion].weight)"><span class="glyphicon" aria-hidden="true"></span> {{response.label}}</button>
 
                 <!-- Already responded button -->
-                <button type="button" class="btn btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response" ng-click="saveResponse(response)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.label}}</button>
+                <button type="button" class="btn btn-success response" ng-if="userResponses[currentCategory][currentQuestion] === response" ng-click="saveResponse(response,assesment.categories[currentCategory].questions[currentQuestion].weight)"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> {{response.label}}</button>
 
             </li>
         </ol>

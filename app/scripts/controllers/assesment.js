@@ -27,9 +27,21 @@ angular.module('assesmentNgApp')
             $scope.assesment = data;
             $scope.questionCount = 0;
   
-            // Count the questions
-            angular.forEach($scope.assesment.categories, function (value, key) {
-                $scope.questionCount = $scope.questionCount + value.questions.length;
+            // Count the questions in each category
+            var index = 0;
+            angular.forEach($scope.assesment.categories, function (category, key) {
+                $scope.questionCount = $scope.questionCount + category.questions.length;
+                
+                // Count the total weight of the category and inject it into the structure
+                var totalWeight = 0;
+                angular.forEach(category.questions, function (question, key) {
+                    totalWeight = totalWeight + question.weight;
+                });
+                
+                $scope.assesment.categories[index].weight = totalWeight; 
+                console.log(category.name + " : " +$scope.assesment.categories[index].weight);
+                
+                index++;
             });
 
         }).error(function (error) {
@@ -55,7 +67,8 @@ angular.module('assesmentNgApp')
         }
 
         // Save the user's response into a map
-        $scope.saveResponse = function (response) {
+        $scope.saveResponse = function (response, weight) {
+
 
             // Initialize the array
             if ($scope.userResponses[$scope.currentCategory] === undefined) {
@@ -73,6 +86,9 @@ angular.module('assesmentNgApp')
             }
 
             // Save the response
+            response.weight = weight;
+            console.log("Saving response : " + JSON.stringify(response));
+            
             $scope.userResponses[$scope.currentCategory][$scope.currentQuestion] = response;
 
             // Global progression calculation

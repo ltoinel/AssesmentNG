@@ -17,7 +17,12 @@
     </div>
     
     <div class="col-md-9">
-        <canvas id="radar" class="chart chart-radar" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series"></canvas>
+        <canvas id="radar" class="chart chart-radar" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-options="{
+        scaleOverride : true,
+        scaleSteps : 5,
+        scaleStepWidth : 1,
+        scaleStartValue : 0 
+    }"></canvas>
     </div>
 
 </div>
