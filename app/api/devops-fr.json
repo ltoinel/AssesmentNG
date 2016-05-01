@@ -1,0 +1,1819 @@
+{
+  "id": 1,
+  "name": "DevOps - FR",
+  "type": "Public",
+  "series": {
+    "YES": "current",
+    "PLANNED": "expected"
+  },
+  "categories": [
+    {
+      "id": "s",
+      "name": "Gestion du code source",
+      "description": "Questions autour de la gestion du code",
+      "level": {
+        "Current": "Intermediate",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce que le code source, les configurations d'application, les configurations d'environnement et les scripts de compilation sont gérés par un outil de gestion de configuration (SVN, Git ...) ?",
+          "action": "Définir une stratégie de gestion de configuration.",
+		  "weight": 1,
+          "responses": [
+            {
+              "id": "s1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce que les 'commits' de code par jour sont fréquents (3 à 4 fois par développeur)?",
+		  "action": "Augmenter la fréquence de commit des développeurs pour éviter le déphasage des développements et diminuer les merges sources d'erreurs",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "s2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce que le code est toujours compilé en local se base sur la dernière version, est-ce que les tests unitaires sont exécutés localement avant les 'commit'?",
+          "action": "Définir une procédure locale pour s'assurer que le code en 'commit' de contient pas de régressions importantes",
+		  "weight": 2,
+          "responses": [
+            {
+              "id": "s3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce qu'un processus standard de gestion de versions, tags, branches, merges est défini ?",
+		  "action": "Mettre en place un processus standard de gestion de versions, tags, branches, merges",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Est-ce que les 'commits' sont associés à des tâches ?",
+		  "action": "Définir une procédure afin que les 'commits' réalisés soient toujours associés à des tâches précises",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce que les configurations applicatives et les configurations d'environnement sont stockées à l'extérieur du code et sont maintenues séparément ?",
+		  "action": "Externalisez les configurations applicatives et les configurations d'environnement pour plus de souplesse sur les processus de déploiement automatisés",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "s6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Est-ce que les structures des schémas SQL sont stockées dans l'outil de gestion de configuration ?",
+		  "action": "Intégrer la gestion des shémas SQL dans l'outil de gestion de configuration pour éviter les erreurs lors du déploiement",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s7-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s7-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s7-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Est-ce que le 'trunk' est mis à jour régulièrement ?",
+		  "action": "Définir une stratégie de merge pour permettre au trunk d'être mis régulièrement à jour afin d'éviter des regressions importantes.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s8-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s8-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s8-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Est-ce qu'une branche ou un tag est créé par release applicative ?",
+		  "action": "Définissez un plan de tag / branche afin que le code source de chaque release applicative puisse être identifié",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "s9-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s9-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s9-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Est-ce que les scripts de création d'environnement sont stockés dans un outil de gestion de configuration ?",
+		  "action" : "Stockez l'ensemble des scripts de créations d'environnement dans l'outil de gestion de configuration",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "s10-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "s10-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "s10-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "name": "Compilation",
+      "description": "Questions autour du processus de compilation",
+      "level": {
+        "Current": "Advanced",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce que les compilations 'officielles' sont réalisées par des machines dédiées ?",
+		  "action": "Evitez de compiler vos releases localement par votre équipe de développement pour plus d'autonomie",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "b1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce que des versions en libre service et 'nightly builds' sont produites ?",
+		  "action": "Produisez des release en libre service pour permettre aux équipes de test de tester fréquement sans être bloqué par un processus manuel de livraison",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "b2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce qu'une procédure de compilation a été définie localement sur les postes de développement et de manière centrale sur l'usine logicielle ?",
+		  "action": "Définir une procedure de compilation",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce que les scripts de compilation utilisés localement et sur l'usine logicielle sont les mêmes ?",
+		  "action": "Mutualisez le maximum de scripts afin d'éviter des regressions lors de la phase de compilation par l'usine logicielle",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Est-ce que le code source récupéré / compilé par l'usine logicielle est tout le temps à jour ?",
+		  "action": "Assurez-vous d'avoir autant de processus de compilation automatisées que de branches sur lesquelles vous travaillez.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce que les artefacts produits lors de la compilation sur l'usine logicielle sont gérés et versionnés au travers d'un 'artifacory' ?",
+		  "action": "Mettez en place un outil permettant de centraliser / versionner vos artefacts.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Est-ce que des notifications de compilation sont configurées pour annoncer des compilations en succès, en erreur ou bien des indicateurs de qualité non respectés ?",
+		  "action": "Mettez en place des indicateurs de qualité logicielle et un système de notification vous permettant d'identifier rapidement une regression sur la phase de compilation.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b7-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b7-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b7-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Est-ce qu'un dashboard est mis à disposition pour connaitre l'état des dernières compilations et le détail des indicateurs de qualité ?",
+		  "action": "Mettez en place une solution permettant à quiconque d'identifier la liste des releases disponibles et celles qui sont en cours de réalisation ainsi que leurs indicateurs de qualité.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b8-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b8-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b8-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Est-ce que les dépendances logicielles sont gérées au travers d'un dépot local ?",
+		  "action": "Mutualisez le plus possible vos dépendances logicielles pour permettre à tout moment d'identifier les applicatifs impactés par un problème de sécurité sur une librairie tierce.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "b9-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b9-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b9-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Est-ce que la création de versions/tags est automatique et est géré par le processus de compilation ?",
+		  "action": "Mettez en place un outil de release capable de versionner votre outil de gestion de configuration dès lors que l'applicatif compilé possède l'ensemble des critères de qualité.",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "b10-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b10-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b10-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Est-ce que des compilations sont réalisés automatiquement lors de la détection d'un nouveau 'commit'?",
+		  "action": "Configurez des triggers qui permettent de tester en continuer le code déplosé sur l'outil de gestion de configuration.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "b11-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b11-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b11-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Est-ce que la compilation est distribuée sur un cluster ?",
+		  "action": "Le temps de compilation peut être un critère important dans le cadre d'un applicatif de taille conséquente, mettez en place un cluster capable de distribuer la compilation pour économiser du temps.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "b12-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b12-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b12-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Est-ce que l'usine logicielle fonctionne sur une infrastructure virtualisée ?",
+		  "action": "Déportez votre usine logicielle sur une infrastructure virtualisée afin de la rendre plus robuste à une panne matérielle.",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "b13-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b13-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b13-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Est-ce des 'gated commit' sont réalisés ?",
+		  "action": "Réalisez des 'gated commit' afin de réduire à 0 la probabilité de réaliser un commit de code produisant des erreurs de compilation.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "b14-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "b14-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "b14-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t",
+      "name": "Gestion des tests",
+      "description": "Questions autour de la gestion des tests",
+      "level": {
+        "Current": "Beginner",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce que les tests unitaires et les tests d'intégration font parti du processus de compilation local et central?",
+		  "action": "Mettre en place une stratégie de tests au niveau du processus de compilation.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce qu'une stratégie de tests a été défini ?",
+		  "action": "Définir une stratégie de tests afin d'identifier l'ensemble des tests réalisés et leur localisation.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce que des revues de code sont réalisés ?",
+		  "action": "Mettre en place un revue de code par pair.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce que des indicateurs de qualités sont mesurés avec une couverture signifiante?",
+		  "action": "Revoir les indicateurs de qualités mesurés afin qu'ils soient pertinants.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "t4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Est-ce que des notifications sont configurées pour chaque type de tests ?",
+		  "action": "Mettre en place un mécanisme de notification capable de notifier l'équipe lorsque les tests sont exécutés.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "t5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce que des Mocks sont réalisés dès lors que l'applicatif doit s'intégrer avec un système tiers ?",
+		  "action": "Mettre en place des Mocks afin de permettre aux tests de fonctionner même lorsque le système tiers n'est plus disponnible.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "t6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Est-ce que des tests unitaires, des tests d'intégration et des 'smoke test' sont réalisés par les développeurs lors de chaque commit et par l'usine logicielle ?",
+		  "action": "S'assurer qu'un mimimum de tests est réalisé par les développeurs avant leurs 'commit' afin de limiter les regressions.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t7-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t7-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t7-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Est-ce que les tests fonctionnels sont automatisés?",
+		  "action": "Mettre en place des tests fonctionnels automatisés dès que possible",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t8-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t8-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t8-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Est-ce qu'un indicateur de la couverture des tests fonctionnels est produit ?",
+		  "action": "Mettre en place un indicateur permettant de mesurer la couverture des tests fonctionnels.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t9-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t9-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t9-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Est-ce que les jeux de donnés sont maintenus et partagés ?",
+		  "action": "Définir une gouvernance des jeux de données afin que ceux-ci soient maintenus et accessible de toute l'équipe.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t10-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t10-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t10-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Est-ce que l'application possède un bouchon intelligent à destination des applications qui doivent s'intégrer à elle ?",
+		  "action": "Mettre en place des bouchons intelligents dès que possible afin de limiter les risques d'intégration de composants logiciels.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t11-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t11-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t11-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Est-ce que des tests techniques sont réalisés après chaque commit ?",
+		  "action": "Réaliser un minim de tests techniques après chaque commit",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t12-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t12-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t12-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Est-ce que les tests techniques sont automatisés?",
+		  "action": "Automatiser dès que possible les tests techniques.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "t13-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t13-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t13-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Est-ce que les tests UAT sont automatisés de manière modérée ?",
+		  "action": "Mettre en place des scénarios de tests UAT automatisés dès lors que cela est possible.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t14-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t14-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t14-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Est-ce que les test UAT sont automatisés avec une couverture importante ?",
+		  "action": "Mettre en place des tests UAT automatisés avec une couverture importante afin de réduire le délai / coûts de mise en production.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "t15-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "t15-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "t15-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "name": "Déploiement",
+      "description": "Questions autour du déploiement",
+      "level": {
+        "Current": "Intermediete",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce que les déploiements sont automatisés par des scripts ?",
+		  "action": "Automiser le déploiement des applicatifs via des solutions d'automatisation.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "d1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce que les environnements sont initialisés avec des scripts ?",
+		  "action": "Automatisez la configuration des environnements via l'utilisation de solutions d'automatisation.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "d2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce que les produits compilés n'ont pas d'adhérence avec un environnement ?",
+		  "action": "Assurez-vous que les produits compilés ne possèdent aucune adhérence avec une quelquonque plateforme.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce qu'un processus standard d'initialisation d'environnement et de déploiement est défini ?",
+		  "action": "Définir un processus standard d'initialisation d'environnement et de déploiement.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Existe-t-il un bouton permettant l'automatisation du déploiement de l'application sur des plateformes de test?",
+		  "action": "Mettre en place un processus d'automatisation du déploiement de l'application sur des plateformes de test.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce que les fichiers de configurations sont configurés automatiquement lors du déploiement ?",
+		  "action": "Automatiser la configuration applicative lors du déploiement.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Est-ce que la création d'environnement de tests et le déploiement d'applications sont automatisés ?",
+		  "action": "Mettez en place des outils pour permettre la création d'environnement de tests et le déploiement automatisée d'application.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d7-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d7-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d7-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Est-ce que les scripts de déploiement sont communs entre tous les environnements ?",
+		  "action": "Mutualisez les scripts de déploiement afin d'éviter les spécificités par environnement.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d8-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d8-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d8-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Existe-t-il un bouton de déploiement automatisé sur la plateforme de pré-production ?",
+		  "action": "Mettez en place un outil de déploiement automatisé sur la plateforme de pré-production.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "d9-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d9-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d9-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Est-ce que la création de l'environnement de pre-production est automatisé et possède des scripts de déploiement automatisés ?",
+		  "action": "Mettez en place des outils d'automatisation de création d'environnement et de déploiement automatisé.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d10-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d10-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d10-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Est-ce que la base de données est initialisée automatiquement ?",
+		  "action": "Mettez en place des outils permettant d'intialiser le schéma de la base automatiquement.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d11-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d11-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d11-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Existe-t-il un bouton pour déployer automatiquement l'applicatif sur l'environnement de production ?",
+		  "action": "Mettez en place un outil de déploiement automatique de l'applicatif sur l'environnement de production.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d12-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d12-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d12-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Est-ce que le déploiement multi-tiers est coordonné par un workflow ?",
+		  "action": "Mettez en place un outil capable de réaliser le déploiement multi-tier de manière coordonnée.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "d13-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d13-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d13-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Est-ce que des VM promues ou des containers sont utilisés pour le déploiement ?",
+		  "action": "Mettez en place un outil de contenairisation permettant de simplifier le déploiement d'application sur l'ensemble des environnements.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d14-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d14-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d14-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Est-ce que le déploiement jusqu'à la plateforme de production se fait sans intervention manuelle ?",
+		  "action": "Automatisez le maximum de traitements manuels possibles pour limiter les erreurs et fournir plus d'agilité au déploiement.",
+          "weight": 5,
+          "responses": [
+            {
+              "id": "d15-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "d15-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "d15-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r",
+      "name": "Gestion des releases applicatives",
+      "description": "Questions autour de la gestion des releases applicatives",
+      "level": {
+        "Current": "Advanced",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce que les releases applicatives sont fréquentes ?",
+		  "action": "Mettez en place des cycles court pour augmenter votre capacité à déployer rapidement.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "r1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce qu'un processus standard de release applicative est défini ?",
+		  "action": "Définir un processus standard de release applicative.",
+          "weight": 1,
+          "responses": [
+            {
+              "id": "r2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce que les exigences sont tracées jusqu'au bordereau de livraison ?",
+		  "action": "Assurez-vous du suivi des exigences jusqu'au bordereau de livraison.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce que le bordereau de livraison sont générés automatiquement ?",
+		  "action": "Automatisez la fabrication du bordereau de livraison gràce aux tâches utilisés dans les commits.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Est-ce que le développement et les releases applicatives sont organisés autour de 'features' ?",
+		  "action": "Réorganisez les releases applicatives autour des features définies.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "r5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce qu'un portail self-service permet de créer une nouvelle release applicative ?",
+		  "action": "Mettez en place un portail de self-service permettant à quiconque de l'équipe de créer de nouvelles releases applicatives.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "r6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "r6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "r6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m",
+      "name": "Supervision",
+      "description": "Questions autour de la supervision",
+      "level": {
+        "Current": "Base",
+        "Expecter": "Advanced"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "title": "Est-ce qu'un dashboard contenant l'ensemble des activités de livraison est mis à disposition ?",
+		  "action": "Mettez en place un dashboard permettant de visualiser l'ensemble des activités de livraison.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m1-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m1-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m1-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Est-ce que les rapports et indicateurs sont visibles de l'ensemble des acteurs du projet ?",
+		  "action": "Partagez les outils de reporting à l'ensemble des acteurs du projet.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m2-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m2-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m2-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Est-ce qu'un minimum d'indicateurs de mesure de qualité logicielle est produit ?",
+		  "action": "Assurez-vous que des indicateurs de mesure de la qualité logicielle est produit.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "m3-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m3-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m3-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Est-ce que les rapports archivés et temps réel sont accessibles ?",
+		  "action": "Rendez disponible l'évolution des indicateurs dans le temps afin de pouvoir comprendre comment évolue l'applicatif.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m4-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m4-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m4-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Est-ce que les métriques générés sont complêts ?",
+		  "action": "Assurez-vous de la complétude des métriques générés sur le projet.",
+          "weight": 2,
+          "responses": [
+            {
+              "id": "m5-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m5-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m5-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Est-ce qu'un rapport de tendance globale est généré ?",
+		  "action": "Fabriquez un rapport de tendance.",
+          "weight": 3,
+          "responses": [
+            {
+              "id": "m6-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m6-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m6-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Est-ce qu'une analyse du rapport global est réalisée ?",
+		  "action": "Faites une analyse du rapport global.",
+          "weight": 4,
+          "responses": [
+            {
+              "id": "m7-1",
+              "value": "YES",
+              "label": "Oui",
+              "type": "choice"
+            },
+            {
+              "id": "m7-2",
+              "value": "NO",
+              "label": "Non",
+              "type": "choice"
+            },
+            {
+              "id": "m7-3",
+              "value": "PLANNED",
+              "label": "C'est en cours",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
