@@ -23,6 +23,15 @@
         scaleStepWidth : 1,
         scaleStartValue : 0 
     }"></canvas>
+	
+		<h2>Plan d'actions</h2>
+		
+		 <ul class="list-group">
+          <li class="list-group-item" ng-repeat="action in actions">
+			<span class="badge">{{action.weight}}</span>
+            {{action.label}}
+          </li>
+        </ul>
     </div>
 
 </div>

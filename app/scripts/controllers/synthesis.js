@@ -21,13 +21,21 @@ angular.module('assesmentNgApp')
         var data = [];
         var index = 0;
         var responseCount = [];
+		var actions = [];
         
         // For each results we count the value by category
         angular.forEach($rootScope.userResponses, function(category, key) {
             
-
              angular.forEach(category, function(response, key) {
                  
+				// We setup the list of actions
+				if (response.value === "NO"){
+					var action = [];
+					action.label = response.action;
+					action.weight = response.weight;
+					actions.push(action);
+				}
+				
                 // If the category doesn't exist we create it
                 if (data[response.value] === undefined){
                       data[response.value] = [];
@@ -81,7 +89,8 @@ angular.module('assesmentNgApp')
             
             index++;    
         });
-        
+		
+        $scope.actions = actions;
         $scope.responseCount = responseCount;
         $scope.labels = categories;
         $scope.data = [];

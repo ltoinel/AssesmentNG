@@ -67,7 +67,7 @@ angular.module('assesmentNgApp')
         }
 
         // Save the user's response into a map
-        $scope.saveResponse = function (response, weight) {
+        $scope.saveResponse = function (response, question) {
 
 
             // Initialize the array
@@ -86,7 +86,8 @@ angular.module('assesmentNgApp')
             }
 
             // Save the response
-            response.weight = weight;
+            response.weight = question.weight;
+			response.action = question.action;
             console.log("Saving response : " + JSON.stringify(response));
             
             $scope.userResponses[$scope.currentCategory][$scope.currentQuestion] = response;
